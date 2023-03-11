@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+    <title>نموذج تسجيل دخول & تسجيل جديد</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="Login Form.css"/>
+
+</head>
+<body>
+    <section class="wrapper">
+      <div class="form signup">
+        <header>تسجيل جديد</header>
+
+        <form action="#">
+          <input type="text" placeholder="إسم المستخدم" required/>
+          <input type="text" placeholder="البريد الإلكتروني أو رقم الهاتف" required/>
+          <input type="password" placeholder="كلمة السر" required/>
+
+          <div class="checkbox">
+            <input type="checkbox" id="signupCheck"/>
+            <label for="signupCheck">أوافق على جميع الشروط والأحكام</label>
+          </div>
+
+          <input type="submit" value="تسجيل"/>
+        </form>
+      </div>
+
+      <div class="form login">
+        <header>تسجيل دخول</header>
+
+        <form action="#">
+          <input type="text" placeholder="إسم المستخدم أو البريد الإلكتروني أو رقم الهاتف" required/>
+          <input type="password" placeholder="كلمة السر" required/>
+
+          <a href="#">نسيت كلمة السر؟</a>
+
+          <input type="submit" value="تسجيل دخول"/>
+        </form>
+      </div>
+    </section>    
+    <script src="Login Form.js"></script>
+</body>
+</html>
