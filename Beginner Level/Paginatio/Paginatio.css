@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans Arabic', sans-serif; }
+
+:root {
+    --primary-color: #f6f7fb;
+    --white-color: #fff;
+    --black-color: #18191a; }
+
+body {
+    height: 100vh;
+    background: var(--primary-color); }
+
+body.dark {
+    --primary-color: #242526;
+    --white-color: #18191a;
+    --black-color: #fff; }    
+
+body, .container, .button, .links, .link {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.container {
+    padding: 20px;
+    border-radius: 8px;
+    column-gap: 12px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); }
+
+.button {
+  border: none; }
+.button i {
+    pointer-events: none; }
+
+.button:disabled {
+    color: #b3b3b3;
+    pointer-events: none; }
+
+.button, .link {
+    height: 45px;
+    width: 45px;
+    font-size: 20px;
+    color: #666666;
+    background-color: #f2f2f2;
+    border-radius: 6px;
+    cursor: pointer; }
+
+.links {
+    column-gap: 12px; }
+    
+.link {
+    font-weight: 500;
+    text-decoration: none; }
+
+.button:hover, .link:hover {
+    color: #fff;
+    background: #1579c7; }
+
+.link.active {
+    color: #fff;
+    background: #1579c7; }
+
+.mode-switch {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 22px;
+    font-weight: 500;
+    display: inline-block;
+    color: var(--white-color);
+    background: var(--black-color);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
