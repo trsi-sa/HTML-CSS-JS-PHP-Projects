@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Arabic:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
 * {
     margin: 0; padding: 0;
     box-sizing: border-box;
