@@ -1,2 +1,2 @@
 # HTML-CSS-JS-Projects
-A Repository Containing Open Source Projects in HTML &amp; CSS &amp; JS, Beginner Level And Average Level And Pro Level.
+مستودع يحتوي على مشاريع مفتوحة المصدر بلغة هتمل وسي إس إس وجافاسكربت وبي إتش بي، مستوى مبتدئ ومتوسط وإحترافي.
