@@ -1,8 +1,6 @@
 const circles = document.querySelectorAll(".circle"),
 progressBar = document.querySelector(".indicator"),
-buttons = document.querySelectorAll("button"),
-modeSwitch = document.querySelector(".mode-switch"),
-body = document.querySelector("body");
+buttons = document.querySelectorAll("button");
 
 let currentStep = 1;
 
@@ -23,15 +21,3 @@ else {
 
 buttons.forEach((button) => {
     button.addEventListener("click", updateSteps); });
-
-if (localStorage.getItem("mode") === "الوضع المظلم") {
-    body.classList.add("dark");
-    modeSwitch.textContent = "الوضع الفاتح"; }
-    
-modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    
-    const isDarkMode = body.classList.contains("dark");
-        
-    modeSwitch.textContent = isDarkMode ? "الوضع الفاتح" : "الوضع المظلم";
-    localStorage.setItem("mode", isDarkMode ? "الوضع المظلم" : "الوضع الفاتح"); });
