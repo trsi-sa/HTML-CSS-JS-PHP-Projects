@@ -1,9 +1,7 @@
 const startBtn = document.querySelector("#startBtn"),
 endBtn = document.querySelector("#endBtn"),
 prevNext = document.querySelectorAll(".prevNext"),
-numbers = document.querySelectorAll(".link"),
-modeSwitch = document.querySelector(".mode-switch"),
-body = document.querySelector("body");
+numbers = document.querySelectorAll(".link");
 
 let currentStep = 0;
 
@@ -54,15 +52,3 @@ endBtn.addEventListener("click", () => {
     updateBtn();
     startBtn.disabled = false;
     prevNext[0].disabled = false; });
-
-if (localStorage.getItem("mode") === "الوضع المظلم") {
-    body.classList.add("dark");
-    modeSwitch.textContent = "الوضع الفاتح"; }
-        
-modeSwitch.addEventListener("click", () => {
-    body.classList.toggle("dark");
-    
-    const isDarkMode = body.classList.contains("dark");
-            
-    modeSwitch.textContent = isDarkMode ? "الوضع الفاتح" : "الوضع المظلم";
-    localStorage.setItem("mode", isDarkMode ? "الوضع المظلم" : "الوضع الفاتح"); });
