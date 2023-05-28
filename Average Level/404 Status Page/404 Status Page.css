@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans Arabic', sans-serif; }
+
+:root {
+    --header-height: 3.5rem;
+
+    --smaller-font: .75rem;
+    --normal-font: .938rem;
+    --biggest-font: 2.375rem; }
+
+body {
+    background-image: linear-gradient(to bottom right, #CBCDDD, #8496B8, #626C92, #4C5371, #363A51);
+    font-size: var(--normal-font);
+    font-weight: 500;
+    color: #FFF; }
+
+.home {
+    padding: 5rem 0 2rem;
+    height: 100vh;
+    display: grid; }
+
+.home-containner {
+    display: grid; }
+
+.home-data {
+    text-align: center; }
+
+.home-title {
+    font-size: var(--biggest-font);
+    margin: .75rem 0; }
+
+.home-button {
+    background-color: #000;
+    color: #FFF;
+    padding: .80rem 1.5rem;
+    margin-top: 2rem;
+    display: inline-block;
+    border-radius: 3rem;
+    text-decoration: none;
+    transition: all 0.2s ease; }
+
+.home-button:active {
+    transform: scale(0.96); }
+
+.home-img {
+    justify-self: center; }
+
+img {
+    max-width: 100%;
+    height: auto; }
+
+.home-img img {
+    width: 230px;
+    animation: ghost-float 2s infinite alternate; }
+
+.ghost-shadow {
+    width: 130px; height: 24px;
+    background-color: hsla(38, 21%, 19%, .16);
+    margin: 0 auto;
+    border-radius: 50%;
+    filter: blur(7px);
+    animation: ghost-shadow 2s infinite alternate; }
+
+@keyframes ghost-float {
+    0% {
+        transform: translateY(0); }
+    100% {
+        transform: translateY(15px); } }
+
+@keyframes ghost-shadow {
+    0% {
+        transform: scale(1, 1); }
+    100% {
+        transform: scale(1, 1.5); } }
+
+@media screen and (min-width: 1024px) {
+    :root {
+        --smaller-font: .833rem;
+        --normal-font: 1rem;
+        --biggest-font: 5rem; } }
+
+@media screen and (min-width: 320px) {
+    .home {
+        padding-top: 7rem;} }
+
+@media screen and (min-width: 1024px) {
+    .home-containner {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2rem; }
+
+    .home-data {
+        text-align: initial; }
+    
+    .home-img img {
+        width: 400px}
+
+    .ghost-shadow {
+        width: 250px; height: 40px; } }
+
+@media screen and (min-width: 1048px) {
+    .containner {
+        margin-left: auto; margin-right: auto; } }
+
+@media screen and (min-width: 2048px) {
+    body {
+        zoom: 1.7 }
+
+    .home {
+        height: initial;
+        row-gap: 4rem; } }
+
+@media screen and (min-width: 3848px) {
+    body {
+        zoom: 3.1 } }
