@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: 'IBM Plex Sans Arabic', sans-serif; }
+
+:root {
+    --primary: #f6f7fb;
+    --white: #fff;
+    --black: #18191a; }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary); }
+
+body.dark {
+    --primary: #242526;
+    --white: #18191a;
+    --black: #fff; }
+
+.mode-switch {
+    position: relative;
+    bottom: -330px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 50px;
+    font-weight: 500;
+    display: inline-block;
+    color: var(--white);
+    background: var(--black);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer; }
+
+.mode-switch:active {
+    transform: scale(0.96); }
