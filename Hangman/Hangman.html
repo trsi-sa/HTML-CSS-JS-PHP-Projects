@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hangman لعبة</title>
+    
+    <link rel="stylesheet" href="Hangman.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="background">
+      <div class="container">
+          <div class="game-info">
+            <div class="game-name">Hangman</div>
+            <div class="category">كلمة من : <span></span></div>
+          </div>
+          <hr>
+            <div class="row">
+              <div class="hangman-draw">
+                  <div class="the-draw">
+                    <div class="the-stand"></div>
+                    <div class="the-hang"></div>
+                    <div class="the-rope"></div>
+                    <div class="the-man">
+                      <div class="head"></div>
+                      <div class="body"></div>
+                      <div class="hands"></div>
+                      <div class="legs"></div>
+                    </div>
+                  </div>
+                </div>
+              <div class="letters"></div>
+            </div>
+          <hr>
+          <div class="letters-guess"></div>
+      </div>
+  </div>
+
+    <audio id="success" src="Gallery/Success.mp4" preload="auto"></audio>
+    <audio id="fail" src="Gallery/Fail.mp4" preload="auto"></audio>
+    
+    <script src="Hangman.js"></script>
+</body>
+</html>

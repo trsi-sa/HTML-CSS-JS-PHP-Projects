@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
+* {
+    box-sizing: border-box; }
+  
+body {
+    background-color: #18191a;
+    font-family: 'IBM Plex Sans Arabic', sans-serif; }
+
+#background {
+    position: fixed;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    z-index: -1; }
+
+.container {
+    margin: 20px auto;
+    width: 1000px; }
+
+hr {
+    border: 1px solid #EEE; }
+
+.game-info {
+    display: flex; }
+
+.game-name {
+    color: #FFF;
+    font-weight: 600;
+    flex: 1; }
+
+.category {
+    color: #FFF;
+    font-weight: 600;
+    text-align: right;
+    flex: 1; }
+
+.category span {
+    color: #FDD017;
+    font-weight: 700;
+    text-transform: capitalize; }
+
+.hangman-draw {
+    background-color: #F8F8F8;
+    padding: 20px;
+    height: 324px;
+    flex: 1; }
+
+.the-draw {
+    height: 280px; width: 60px;
+    border-bottom: 4px solid #222;
+    position: relative;
+    margin: auto;
+    left: -60px;
+    display: none; }
+
+.the-stand {  
+    position: absolute;
+    height: 100%; width: 4px;
+    background-color: #222;
+    left: 50%; margin-left: -2px;
+    display: none; }
+
+.the-hang {
+    display: none; }
+
+.the-hang:before {
+    content: "";
+    position: absolute;
+    height: 4px; width: 100px;
+    background-color: #222;
+    top: 15px; left: 30px; }
+
+.the-hang:after {
+    content: "";
+    position: absolute;
+    height: 30px; width: 4px;
+    background-color: #222;
+    top: 15px; left: 130px; }
+
+.the-rope {
+    height: 70px; width: 70px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45px; left: 95px;
+    border: 4px dashed #222;
+    display: none; }
+
+.head {
+    height: 50px; width: 50px;
+    border-radius: 50%;
+    border: 4px solid #222;
+    position: absolute;
+    top: 55px; left: 105px;
+    display: none; }
+
+.body {
+    position: absolute;
+    background-color: #222;
+    height: 110px; width: 4px;
+    top: 102px; left: 130px;
+    display: none; }
+
+.hands {
+    display: none; }
+
+.hands:before {
+    left: 85px;
+    transform: rotate(30deg); }
+
+.hands:after {
+    left: 130px;
+    transform: rotate(-30deg); }
+
+.hands:before, .hands:after {
+    content: "";
+    height: 4px; width: 50px;   
+    position: absolute;
+    background-color: #222;
+    top: 140px; }
+
+.legs {
+    display: none; }
+
+.legs:before {
+    left: 85px;
+    transform: rotate(-30deg); }
+
+.legs:after {
+    left: 130px;
+    transform: rotate(30deg); }
+
+.legs:before, .legs:after {
+    content: "";
+    height: 4px; width: 50px;
+    position: absolute;
+    background-color: #222;
+    top: 220px; }
+
+.hangman-draw.wrong-1 .the-draw {
+    display: block; }
+
+.hangman-draw.wrong-2 .the-stand {
+    display: block; }
+
+.hangman-draw.wrong-3 .the-hang {
+    display: block; }
+
+.hangman-draw.wrong-4 .the-rope {
+    display: block; }
+
+.hangman-draw.wrong-5 .head {
+    display: block; }
+
+.hangman-draw.wrong-6 .body {
+    display: block; }
+
+.hangman-draw.wrong-7 .hands {
+    display: block; }
+
+.hangman-draw.wrong-8 .legs {
+    display: block; }
+
+.letters {
+    text-align: center;
+    flex: 1;
+    padding: 15px; }
+
+.letters.finished {
+    pointer-events: none; }
+
+.letters .letter-box {
+    height: 45px; width: 45px;   
+    display: inline-block;
+    background-color: #1579c7;
+    color: #FFF;
+    font-size: 23px;
+    font-weight: 700;    
+    margin-right: 10px; margin-bottom: 10px;
+    line-height: 45px;
+    text-transform: uppercase;
+    cursor: pointer; }
+
+.letters .letter-box.clicked {
+    background-color: #222;
+    opacity: .2;
+    pointer-events: none; }
+
+.letters-guess {
+    margin: 10px auto;
+    background-color: #18191a;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    min-height: 104px; }
+
+.letters-guess span {
+    height: 60px; width: 60px;
+    font-size: 24px;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 60px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: #FDFDFD;
+    border-bottom: 3px solid #222;
+    transition: .3s; }
+
+.letters-guess span.with-space {
+    background: none;
+    border-bottom: none;
+    position: relative; }
+
+.letters-guess span.with-space:before {
+    content: "";
+    height: 4px; width: 20px;
+    background-color: #222;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%); }
+
+.popup {
+    position: fixed;
+    background-color: #18191a;
+    padding: 100px 20px;
+    width: 80%;
+    top: 10%; left: 10%;
+    text-align: center;
+    font-size: 40px;
+    border: 5px solid #1579c7;
+    border-radius: 10px;
+    color: #FFF;
+    z-index: 1; }
+
+.blur {
+    filter: blur(6px); }
+
+.active {
+      display: block; }
