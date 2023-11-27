@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menja لعبة منجا</title>
+
+    <link rel="stylesheet" href="Menja.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="c"></canvas>
+
+    <div class="hud">
+        <div class="hud__score">
+            <div class="score-lbl"></div>
+            <div class="cube-count-lbl"></div>
+        </div>
+
+        <div class="pause-btn"><div></div></div>
+        <div class="slowmo">
+            <div class="slowmo__bar"></div>
+        </div>
+    </div>
+
+    <div class="menus">
+        <div class="menu menu--main">
+            <h1>MENJA | منجا</h1>
+            <button type="button" class="play-normal-btn">العب</button>
+            <button type="button" class="play-casual-btn">CASUAL وضع</button>
+        </div>
+
+        <div class="menu menu--pause">
+            <h1>متوقف موقتا</h1>
+            <button type="button" class="resume-btn">أكمل اللعب</button>
+            <button type="button" class="menu-btn--pause">القائمة الأساسية</button>
+        </div>
+
+        <div class="menu menu--score">
+            <h1>😍 جميل جدا</h1>
+            <h2>: النقاط</h2>
+            <div class="final-score-lbl"></div>
+            <div class="high-score-lbl"></div>
+            <button type="button" class="play-again-btn">إعادة اللعب</button>
+            <button type="button" class="menu-btn--score">القائمة الأساسية</button>
+        </div>
+    </div>
+    <audio id="SSW" src="../ProjectsVSCode/Gallery/Sword swing whoosh.mp4" preload="auto"></audio>
+
+    <script src="Menja.js"></script>
+</body>
+</html>
